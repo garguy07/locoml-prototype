@@ -1,0 +1,312 @@
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.hub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hub-header h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.hub-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* .new-pipeline-button {
+    background-color: #c5aaff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .new-pipeline-button:hover {
+    background-color: #b27cff;
+  } */
+
+.home-button {
+  background-color: #c5aaff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+.home-button:hover {
+  background-color: #b27cff;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.pipeline-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e5e7eb;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pipeline-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pipeline-card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.delete-pipeline-button {
+  background-color: transparent;
+  color: #9ca3af;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: -8px -8px 0 0;
+}
+
+.delete-pipeline-button:hover {
+  background-color: #f3f4f6;
+  color: #ef4444;
+}
+
+.pipeline-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pipeline-stats {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.pipeline-date {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* Get API button */
+.get-api-button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+.get-api-button:hover {
+  background-color: #059669;
+}
+
+.no-pipelines {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+}
+
+.no-pipelines p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.create-first-button {
+  background-color: #c5aaff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Dialog styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-dialog {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 400px;
+  max-width: 90%;
+}
+
+.delete-dialog h3 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+
+.delete-warning {
+  padding-top: 13px;
+  color: #ef4444;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+/* API Dialog */
+.api-dialog {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.8rem;
+  width: 700px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.api-dialog p {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.api-dialog h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #111827;
+  padding-top: 0.2rem;
+  padding-bottom: 0.6rem;
+}
+
+.api-code-container {
+  background-color: #1f2937;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  padding: 1.1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  max-height: 400px;
+}
+
+.api-code-container pre {
+  margin: 0;
+  color: #e5e7eb;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-button,
+.cancel-delete-button {
+  background-color: #e0e0e1;
+  color: #4b5563;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.copy-button {
+  background-color: #8433f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.confirm-delete-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hub-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hub-actions {
+    width: 100%;
+  }
+
+  .new-pipeline-button,
+  .home-button {
+    flex: 1;
+  }
+}
