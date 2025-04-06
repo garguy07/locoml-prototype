@@ -16,10 +16,10 @@ import './PipelinePlayground.css';
 // Node types and their colors
 const nodeTypes = {
   input: { label: 'Input', color: '#d5f6fb' },  // Light blue
-  asr: { label: 'ASR', color: '#ebccff' },      // Light green
-  mt: { label: 'MT', color: '#d1feb8' },        // Light gray
-  tts: { label: 'TTS', color: '#f6f3a9' },      // Light yellow
-  ocr: { label: 'OCR', color: '#ffcae9' },      // Light orange
+  asr: { label: 'Speech To Text', color: '#ebccff' },      // Light green
+  mt: { label: 'Machine Translation', color: '#d1feb8' },        // Light gray
+  tts: { label: 'OpenAI GPT-4o', color: '#f6f3a9' },      // Light yellow
+  ocr: { label: 'Text To Speech', color: '#ffcae9' },      // Light orange
 };
 
 // Custom node component with delete button and visible handles
